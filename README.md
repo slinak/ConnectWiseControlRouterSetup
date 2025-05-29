@@ -21,6 +21,11 @@ ForwardPayload
 HttpCallback
 ```
 
+For example, the following rule included in the web.config routing section will listen for any request with a path of /Hello/ and redirect the request to the root address:
+```
+<rule pathExpression="/Hello/" actionType="issueRedirect" actionData="http://$HOST:8040/" />
+```
+
 ## Setup Instructions
 1.  To create the new service, copy the ScreenConnect Relay service entry (HKLM:\SYSTEM\CurrentControlSet\Services\ScreenConnect Relay) within the registry and rename it to ScreenConnect Router.
 2.  Reboot the server.
